@@ -35,6 +35,9 @@ public class PassengerSuccessTest {
     void testPhonePass(){
         assertEquals(1233456789, myPassenger.getPhone());
     }
-
+    @Test
+    void testAgePass(){
+        assertEquals(42, myPassenger.getAge());
+    }
 
 }
