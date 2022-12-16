@@ -4,10 +4,19 @@ import org.example.Passenger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-public class PassengerFailTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class PassengerFailTest {
 
     @BeforeEach
     void setUp() {
-        myPassenger = new Passenger("Mr", "John Doe", 1234334567891L, 1233456789, 42);
+    }
+
+    @Test
+    void testTitleFail() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {
+            new Passenger("Mister", "John Doe", 1235473822, 1222222223, 19);
+        });
+        assertEquals("This is not a valid name. Use Mr, Ms or Mrs.", exMessage.getMessage());
     }
 }
