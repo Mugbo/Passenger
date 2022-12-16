@@ -27,4 +27,17 @@ public class Passenger {
             throw new IllegalArgumentException("This is not a valid name. Use Mr, Ms or Mrs.");
         }
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if(name.length() >= 3){
+            this.name = name;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid name.");
+        }
+    }
 }
