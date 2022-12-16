@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PassengerSuccessTest {
+class PassengerSuccessTest {
     private Passenger myPassenger;
     @BeforeEach
     void setUp() {
