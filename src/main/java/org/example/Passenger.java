@@ -54,4 +54,16 @@ public class Passenger {
         }
     }
 
+    public long getPhone() {
+        return phone;
+    }
+
+    public void setPhone(long phone) {
+        if(String.valueOf(phone).length() >= 7){
+            this.phone = phone;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid phone number.");
+        }
+    }
 }
