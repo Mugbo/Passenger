@@ -22,7 +22,10 @@ public class PassengerSuccessTest {
         assertEquals("Mrs", myPassenger.getTitle());
 
     }
-
+    @Test
+    void testNamePass(){
+        assertEquals("John Doe", myPassenger.getName());
+    }
 
 
 }
