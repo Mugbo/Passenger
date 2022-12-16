@@ -40,4 +40,18 @@ public class Passenger {
             throw new IllegalArgumentException("This is not a valid name.");
         }
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        if(String.valueOf(id).length() >= 10){
+            this.id = id;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid ID.");
+        }
+    }
+
 }
