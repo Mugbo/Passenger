@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Passenger.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PassengerAssignment</a> &gt; <a href="index.source.html" class="el_package">org.example</a> &gt; <span class="el_source">Passenger.java</span></div><h1>Passenger.java</h1><pre class="source lang-java linenums">package org.example;
+
+public class Passenger {
+
+    private String title;
+    private String name;
+    private long id;
+    private long phone;
+    private int age;
+
+<span class="fc" id="L11">    public Passenger(String title, String name, long id, long phone, int age) {</span>
+<span class="fc" id="L12">        setTitle(title);</span>
+<span class="fc" id="L13">        setName(name);</span>
+<span class="fc" id="L14">        setId(id);</span>
+<span class="fc" id="L15">        setPhone(phone);</span>
+<span class="fc" id="L16">        setAge(age);</span>
+<span class="fc" id="L17">    }</span>
+    public String getTitle() {
+<span class="fc" id="L19">        return title;</span>
+    }
+
+    public void setTitle(String title) {
+<span class="fc bfc" id="L23" title="All 6 branches covered.">        if(&quot;Mr&quot;.equalsIgnoreCase(title) || &quot;Mrs&quot;.equalsIgnoreCase(title) || &quot;Ms&quot;.equalsIgnoreCase(title)){</span>
+<span class="fc" id="L24">            this.title = title;</span>
+        }
+        else {
+<span class="fc" id="L27">            throw new IllegalArgumentException(&quot;This is not a valid name. Use Mr, Ms or Mrs.&quot;);</span>
+        }
+<span class="fc" id="L29">    }</span>
+
+    public String getName() {
+<span class="fc" id="L32">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        if(name.length() &gt;= 3){</span>
+<span class="fc" id="L37">            this.name = name;</span>
+        }
+        else{
+<span class="fc" id="L40">            throw new IllegalArgumentException(&quot;This is not a valid name.&quot;);</span>
+        }
+<span class="fc" id="L42">    }</span>
+
+    public long getId() {
+<span class="fc" id="L45">        return id;</span>
+    }
+
+    public void setId(long id) {
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        if(String.valueOf(id).length() &gt;= 10){</span>
+<span class="fc" id="L50">            this.id = id;</span>
+        }
+        else{
+<span class="fc" id="L53">            throw new IllegalArgumentException(&quot;This is not a valid ID.&quot;);</span>
+        }
+<span class="fc" id="L55">    }</span>
+
+    public long getPhone() {
+<span class="fc" id="L58">        return phone;</span>
+    }
+
+    public void setPhone(long phone) {
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        if(String.valueOf(phone).length() &gt;= 7){</span>
+<span class="fc" id="L63">            this.phone = phone;</span>
+        }
+        else{
+<span class="fc" id="L66">            throw new IllegalArgumentException(&quot;This is not a valid phone number.&quot;);</span>
+        }
+<span class="fc" id="L68">    }</span>
+
+
+    public int getAge() {
+<span class="fc" id="L72">        return age;</span>
+    }
+
+    public void setAge(int age) {
+<span class="fc bfc" id="L76" title="All 2 branches covered.">        if(age &gt; 16){</span>
+<span class="fc" id="L77">            this.age = age;</span>
+        }
+        else{
+<span class="fc" id="L80">            throw new IllegalArgumentException(&quot;You must be over 16.&quot;);</span>
+        }
+<span class="fc" id="L82">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
