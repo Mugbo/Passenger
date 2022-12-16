@@ -13,6 +13,15 @@ public class PassengerSuccessTest {
         myPassenger = new Passenger("Mr", "John Doe", 1234334567891L, 1233456789, 42);
     }
 
+    @Test
+    void testTitlePass(){
+        assertEquals("Mr", myPassenger.getTitle());
+        myPassenger.setTitle("Ms");
+        assertEquals("Ms", myPassenger.getTitle());
+        myPassenger.setTitle("Mrs");
+        assertEquals("Mrs", myPassenger.getTitle());
+
+    }
 
 
 
