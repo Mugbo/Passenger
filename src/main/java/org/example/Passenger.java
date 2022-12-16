@@ -15,4 +15,16 @@ public class Passenger {
         setPhone(phone);
         setAge(age);
     }
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        if("Mr".equalsIgnoreCase(title) || "Mrs".equalsIgnoreCase(title) || "Ms".equalsIgnoreCase(title)){
+            this.title = title;
+        }
+        else {
+            throw new IllegalArgumentException("This is not a valid name. Use Mr, Ms or Mrs.");
+        }
+    }
 }
