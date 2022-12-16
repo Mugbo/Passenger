@@ -30,4 +30,16 @@ class PassengerFailTest {
         Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mr", "John Doe", 123542, 1222222223, 19);});
         assertEquals("This is not a valid ID.", exMessage.getMessage());
     }
+
+    @Test
+    void testPhoneFail(){
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mr", "John Doe", 1235423221213L, 122222, 19);});
+        assertEquals("This is not a valid phone number.", exMessage.getMessage());
+    }
+
+    @Test
+    void testAgeFail(){
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mr", "John Doe", 1235423243243L, 1222222223, 13);});
+        assertEquals("You must be over 16.", exMessage.getMessage());
+    }
 }
