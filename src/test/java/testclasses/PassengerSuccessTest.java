@@ -31,7 +31,10 @@ public class PassengerSuccessTest {
     void testIdPass(){
         assertEquals(1234334567891L, myPassenger.getId());
     }
-
+    @Test
+    void testPhonePass(){
+        assertEquals(1233456789, myPassenger.getPhone());
+    }
 
 
 }
